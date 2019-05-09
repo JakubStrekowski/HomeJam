@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour
 {
+    public Transform head;
+    public Transform legs;
 
     public float movementSpeed;
     public float runningSpeed;

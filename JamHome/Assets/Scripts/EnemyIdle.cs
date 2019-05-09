@@ -30,17 +30,19 @@ public class EnemyIdle : Enemy {
         animator.SetInteger("State", 0);
 
         //tu idle patrzy na prost
+        vision.gameObject.SetActive(false);
         yield return new WaitForSeconds(3f);
+        vision.gameObject.SetActive(true);
         if (previousLook)
         {
             animator.SetInteger("State", 1);
-
+            vision.localScale = new Vector3(vision.localScale.x * -1, 1, 1);
             StartCoroutine("LookLeftCoroutine");
         }
         else
         {
             animator.SetInteger("State", 2);
-
+            vision.localScale = new Vector3(vision.localScale.x * -1, 1, 1);
             StartCoroutine("LookRightCoroutine");
         }
         

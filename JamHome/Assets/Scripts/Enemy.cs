@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-
+    public Transform vision;
 	
     private void OnCollisionEnter2D(Collision2D collision)
     {
