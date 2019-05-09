@@ -107,11 +107,16 @@ public class Hero : MonoBehaviour
         }
         if (collision.tag == "Wardrobe" && !lockedInput)
         {
-            collision.gameObject.GetComponent<Wardrobe>().EnableUI();
+            collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
             if (Input.GetAxis("Vertical") > 0)
             {
                 Hide();
             }
+        }
+
+        if (collision.tag == "LadderEnd")
+        {
+            collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -123,7 +128,11 @@ public class Hero : MonoBehaviour
         }
         if (collision.tag == "Wardrobe")
         {
-            collision.gameObject.GetComponent<Wardrobe>().DisableUI();
+            collision.gameObject.GetComponent<ShowUIElement>().DisableUI();
+        }
+        if (collision.tag == "LadderEnd")
+        {
+            collision.gameObject.GetComponent<ShowUIElement>().DisableUI();
         }
     }
 
