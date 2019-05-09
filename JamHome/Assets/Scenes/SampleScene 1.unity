@@ -532,8 +532,8 @@ PolygonCollider2D:
     - - {x: 0, y: 1}
       - {x: -0.95105654, y: 0.30901697}
       - {x: -0.5877852, y: -0.80901706}
-      - {x: 14.436925, y: -1.4385233}
-      - {x: 14.416479, y: 2.615871}
+      - {x: 3.4598794, y: -0.96126044}
+      - {x: 3.4712503, y: 1.5022581}
 --- !u!1 &842730351
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,9 +547,9 @@ GameObject:
   - component: {fileID: 842730352}
   - component: {fileID: 842730356}
   - component: {fileID: 842730357}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hero
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   climbingSpeed: 300
   animator: {fileID: 842730357}
   spriteRenderer: {fileID: 842730353}
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 519420031}
   isVisible: 1
 --- !u!4 &842730355
 Transform:
