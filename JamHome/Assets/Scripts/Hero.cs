@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hero : MonoBehaviour {
 
@@ -10,8 +11,8 @@ public class Hero : MonoBehaviour {
 
     public Camera mainCamera;
 
-    public bool isVisible=true;
-    private bool isClimbing=false;
+    public bool isVisible = true;
+    private bool isClimbing = false;
     private bool lockedInput = false;
 
 
@@ -158,4 +159,17 @@ public class Hero : MonoBehaviour {
     }
     */
 
+    public void LoseGame()
+    {
+        StartCoroutine("GameLost");
+    }
+
+    IEnumerator GameLost()
+    {
+        lockedInput = true;
+        Move(0);
+        // play lost animation
+        yield return new WaitForSeconds(0.4f); //czas animacji
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

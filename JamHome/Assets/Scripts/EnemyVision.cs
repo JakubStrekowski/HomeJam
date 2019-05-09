@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class EnemyVision : MonoBehaviour {
 
-	
-    private void OnCollisionEnter2D(Collision2D collision)
+    public Enemy parentEnemy;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.tag == "Hero")
+        if (collision.tag == "Hero")
         {
-            Debug.Log("Oof");
+            Debug.Log("vision Oof");
             //game is lost
             collision.gameObject.GetComponent<Hero>().LoseGame();
         }
