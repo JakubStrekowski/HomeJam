@@ -2,23 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hero : MonoBehaviour {
+public class Hero : MonoBehaviour
+{
 
     public float movementSpeed;
     public float runningSpeed;
     public float climbingSpeed;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
 
     private bool isVisible;
-    private bool isClimbing=false;
+    private bool isClimbing = false;
     private bool lockedInput = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
 
         Movement();
         if (Input.GetAxis("Horizontal") == 0)
@@ -28,21 +35,25 @@ public class Hero : MonoBehaviour {
 
         if (isClimbing)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, climbingSpeed*Time.deltaTime);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, climbingSpeed * Time.deltaTime);
         }
 
     }
 
     private void Move(float speed)
     {
-       
+            animator.SetFloat("Speed", Mathf.Abs(speed * Time.deltaTime));
+
+
             GetComponent<Rigidbody2D>().velocity = new Vector2(speed * Time.deltaTime, GetComponent<Rigidbody2D>().velocity.y);
-        
+
     }
 
     private void StopMoving()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0,GetComponent<Rigidbody2D>().velocity.y);
+        animator.SetFloat("Speed", 0);
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
     }
 
     private void Movement()
@@ -53,10 +64,15 @@ public class Hero : MonoBehaviour {
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {
+                    spriteRenderer.flipX = false;
+                    
+
                     Move(runningSpeed);
                 }
                 if (Input.GetAxis("Horizontal") < 0)
                 {
+                    spriteRenderer.flipX = true;
+
                     Move(-runningSpeed);
                 }
             }
@@ -64,10 +80,14 @@ public class Hero : MonoBehaviour {
             {
                 if (Input.GetAxis("Horizontal") > 0)
                 {
+                    spriteRenderer.flipX = false;
+
                     Move(movementSpeed);
                 }
                 if (Input.GetAxis("Horizontal") < 0)
                 {
+                    spriteRenderer.flipX = true;
+
                     Move(-movementSpeed);
                 }
             }
@@ -80,14 +100,14 @@ public class Hero : MonoBehaviour {
         {
             if (Input.GetAxis("Vertical") > 0)
             {
-                if(isClimbing==false)ClimbLadder();
+                if (isClimbing == false) ClimbLadder();
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Ladder" &&isClimbing)
+        if (collision.tag == "Ladder" && isClimbing)
         {
             isClimbing = false;
             lockedInput = false;
@@ -101,6 +121,6 @@ public class Hero : MonoBehaviour {
         Debug.Log("wspinam sie");
 
     }
-    
+
 
 }
