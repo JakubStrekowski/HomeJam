@@ -35,15 +35,17 @@ public class EnemyBackForth : MonoBehaviour {
     {
         walkingSpeed = 0;
 
+     
+
+        yield return new WaitForSeconds(4f);
+        walkingSpeed = 300;
         if (spriteRenderer.flipX)
         {
             spriteRenderer.flipX = false;
 
-        }else
-        spriteRenderer.flipX = true;
-
-        yield return new WaitForSeconds(4f);
-        walkingSpeed = 300;
+        }
+        else
+            spriteRenderer.flipX = true;
 
     }
 

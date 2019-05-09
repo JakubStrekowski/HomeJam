@@ -27,17 +27,19 @@ public class EnemyIdle : Enemy {
 
     IEnumerator StayIdleCoroutine()
     {
+        animator.SetInteger("State", 0);
+
         //tu idle patrzy na prost
         yield return new WaitForSeconds(3f);
         if (previousLook)
         {
-            animator.SetInteger("State", 0);
+            animator.SetInteger("State", 1);
 
             StartCoroutine("LookLeftCoroutine");
         }
         else
         {
-            animator.SetInteger("State", 1);
+            animator.SetInteger("State", 2);
 
             StartCoroutine("LookRightCoroutine");
         }
