@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBackForth : MonoBehaviour {
+public class EnemyBackForth : Enemy {
 
     public Animator animator;
     public SpriteRenderer spriteRenderer;
@@ -46,6 +46,7 @@ public class EnemyBackForth : MonoBehaviour {
         }
         else
             spriteRenderer.flipX = true;
+        vision.localScale = new Vector3(vision.localScale.x * -1, 1, 1);
 
     }
 
