@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Hero")
+        {
+            Debug.Log("Oof");
+            //game is lost
+            collision.gameObject.GetComponent<Hero>().LoseGame();
+        }
+    }
+
+
+
 }
