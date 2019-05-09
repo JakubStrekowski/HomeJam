@@ -489,9 +489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b613c5bbb3c1a06449344e76e6d1c3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 600
+  movementSpeed: 300
   runningSpeed: 1200
   climbingSpeed: 300
+  animator: {fileID: 842730357}
+  spriteRenderer: {fileID: 842730353}
 --- !u!4 &842730355
 Transform:
   m_ObjectHideFlags: 0
@@ -522,7 +524,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 1.14}
+    oldSize: {x: 0.32, y: 1.16}
     newSize: {x: 0.32, y: 1.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
