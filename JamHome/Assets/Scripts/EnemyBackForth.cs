@@ -5,12 +5,15 @@ using UnityEngine;
 public class EnemyBackForth : MonoBehaviour {
 
     public Animator animator;
+    public SpriteRenderer spriteRenderer;
     public float walkingSpeed=300f;
     private int currentDirection=1;
 	
 	// Update is called once per frame
 	void Update () {
         var speed = currentDirection * walkingSpeed * Time.deltaTime;
+        
+
         animator.SetFloat("Speed", Mathf.Abs(speed));
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
     }
@@ -19,16 +22,27 @@ public class EnemyBackForth : MonoBehaviour {
     {
         if (collision.collider.tag == "EnemyBorder")
         {
+            
             StartCoroutine("StayIdleCoroutine");
+         
             currentDirection = currentDirection*-1;
+
+            
         }
     }
 
     IEnumerator StayIdleCoroutine()
     {
         walkingSpeed = 0;
-        //tu idle
-         yield return new WaitForSeconds(4f);
+
+        if (spriteRenderer.flipX)
+        {
+            spriteRenderer.flipX = false;
+
+        }else
+        spriteRenderer.flipX = true;
+
+        yield return new WaitForSeconds(4f);
         walkingSpeed = 300;
 
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyIdle : Enemy {
 
+    public Animator animator;
     int currentState0;
     bool previousLook = false; //czy poprzednio patrzyl w prawo
 	// Use this for initialization
@@ -30,11 +31,13 @@ public class EnemyIdle : Enemy {
         yield return new WaitForSeconds(3f);
         if (previousLook)
         {
-            //flip??
+            animator.SetInteger("State", 0);
+
             StartCoroutine("LookLeftCoroutine");
         }
         else
         {
+            animator.SetInteger("State", 1);
 
             StartCoroutine("LookRightCoroutine");
         }
@@ -44,14 +47,14 @@ public class EnemyIdle : Enemy {
     IEnumerator LookLeftCoroutine()
     {
         //tu idle patrzy w lewo
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
         previousLook = !previousLook;
         StartCoroutine("StayIdleCoroutine");
     }
     IEnumerator LookRightCoroutine()
     {
         //tu idle patrzy w prawo
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
         previousLook = !previousLook;
         StartCoroutine("StayIdleCoroutine");
 
