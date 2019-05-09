@@ -107,6 +107,7 @@ public class Hero : MonoBehaviour
         }
         if (collision.tag == "Wardrobe" && !lockedInput)
         {
+            collision.gameObject.GetComponent<Wardrobe>().EnableUI();
             if (Input.GetAxis("Vertical") > 0)
             {
                 Hide();
@@ -119,6 +120,10 @@ public class Hero : MonoBehaviour
         {
             isClimbing = false;
             lockedInput = false;
+        }
+        if (collision.tag == "Wardrobe")
+        {
+            collision.gameObject.GetComponent<Wardrobe>().DisableUI();
         }
     }
 
