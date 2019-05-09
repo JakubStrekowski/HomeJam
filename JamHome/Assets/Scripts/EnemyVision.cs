@@ -10,9 +10,13 @@ public class EnemyVision : MonoBehaviour {
     {
         if (collision.tag == "Hero")
         {
-            Debug.Log("vision Oof");
-            //game is lost
-            collision.gameObject.GetComponent<Hero>().LoseGame();
+            if (collision.gameObject.GetComponent<Hero>().isVisible)
+            {
+                Debug.Log("Oof");
+                //game is lost
+                collision.gameObject.GetComponent<Hero>().LoseGame();
+
+            }
         }
     }
 

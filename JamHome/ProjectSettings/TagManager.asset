@@ -8,6 +8,7 @@ TagManager:
   - LadderEnd
   - Wardrobe
   - Hero
+  - EnemyBorder
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - EnemyOnly
+  - Enemy
+  - Hero
   - 
   - 
   - 
