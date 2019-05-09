@@ -19,10 +19,19 @@ public class EnemyBackForth : MonoBehaviour {
     {
         if (collision.collider.tag == "EnemyBorder")
         {
+            StartCoroutine("StayIdleCoroutine");
             currentDirection = currentDirection*-1;
         }
     }
 
+    IEnumerator StayIdleCoroutine()
+    {
+        walkingSpeed = 0;
+        //tu idle
+         yield return new WaitForSeconds(4f);
+        walkingSpeed = 300;
+
+    }
 
 
 }
