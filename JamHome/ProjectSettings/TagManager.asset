@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ladder
   - LadderEnd
+  - Wardrobe
+  - Hero
   layers:
   - Default
   - TransparentFX
