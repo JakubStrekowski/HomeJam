@@ -11,9 +11,6 @@ public class Hero : MonoBehaviour
     public float climbingSpeed;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-
-player_movment_anim
-  private bool isVisible;
     public Camera mainCamera;
 
     public bool isVisible = true;

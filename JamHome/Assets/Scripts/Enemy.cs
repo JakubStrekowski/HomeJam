@@ -9,9 +9,13 @@ public class Enemy : MonoBehaviour {
     {
         if (collision.collider.tag == "Hero")
         {
-            Debug.Log("Oof");
-            //game is lost
-            collision.gameObject.GetComponent<Hero>().LoseGame();
+            if (collision.gameObject.GetComponent<Hero>().isVisible)
+            {
+                Debug.Log("Oof");
+                //game is lost
+                collision.gameObject.GetComponent<Hero>().LoseGame();
+
+            }
         }
     }
 
