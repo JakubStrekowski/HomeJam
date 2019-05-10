@@ -9,6 +9,7 @@ TagManager:
   - Wardrobe
   - Hero
   - EnemyBorder
+  - LadderBegin
   layers:
   - Default
   - TransparentFX

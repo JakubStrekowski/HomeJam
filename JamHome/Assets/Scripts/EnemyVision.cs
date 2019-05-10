@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour {
-
-    public Enemy parentEnemy;
-    public GameObject turtle;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
