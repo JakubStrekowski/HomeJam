@@ -7,6 +7,7 @@ public class Hero : MonoBehaviour
 {
     public Transform head;
     public Transform legs;
+    public AudioClip steps;
 
     public float movementSpeed;
     public float runningSpeed;
@@ -37,10 +38,21 @@ public class Hero : MonoBehaviour
 
     private void Move(float speed)
     {
-            animator.SetFloat("Speed", Mathf.Abs(speed * Time.deltaTime));
+        
+       // StartCoroutine("PlayStepSoundCourutine");
+        
+
+        animator.SetFloat("Speed", Mathf.Abs(speed * Time.deltaTime));
             GetComponent<Rigidbody2D>().velocity = new Vector2(speed * Time.deltaTime, GetComponent<Rigidbody2D>().velocity.y);
 
     }
+
+    //IEnumerator PlayStepSoundCourutine()
+    //{
+    //    GetComponent<AudioSource>().Play();
+    //    yield return new WaitForSeconds(1f);
+    //    GetComponent<AudioSource>().Play();
+    //}
 
     private void StopMoving()
     {

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour {
 
+
     public float TimeValue
     {
         get
@@ -21,7 +22,7 @@ public class TimeManager : MonoBehaviour {
 
     public Hero hero;
     public Image timeCounter;
-
+    public AudioClip bell;
     private float timeValue;
     private float maxTime;
     // Use this for initialization
@@ -43,6 +44,8 @@ public class TimeManager : MonoBehaviour {
         }
         else
         {
+            GetComponent<AudioSource>().PlayOneShot(bell);
+
             //dzwiek dzwonka
             hero.LoseGame();
         }
