@@ -145,6 +145,7 @@ public class Hero : MonoBehaviour
             {
                 isClimbingDown = false;
                 lockedInput = false;
+                GetComponent<Animator>().SetInteger("Climb", 0);
             }
             collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
             if (Input.GetAxis("Vertical") > 0)
@@ -160,6 +161,7 @@ public class Hero : MonoBehaviour
             {
                 isClimbing = false;
                 lockedInput = false;
+                GetComponent<Animator>().SetInteger("Climb", 0);
             }
             collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
             if (Input.GetAxis("Vertical") < 0)
@@ -188,12 +190,14 @@ public class Hero : MonoBehaviour
 
     private void ClimbLadder()
     {
+        GetComponent<Animator>().SetInteger("Climb", 1);
         isClimbing = true;
         lockedInput = false;
     }
 
     private void ClimbLadderDown()
     {
+        GetComponent<Animator>().SetInteger("Climb", 1);
         isClimbingDown = true;
         lockedInput = false;
     }
