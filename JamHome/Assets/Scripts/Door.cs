@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour {
 
+    public AudioClip openSnd;
+
     public void PlayOpenAnim()
     {
         StartCoroutine("StartOpeningCoroutine");
@@ -14,6 +16,7 @@ public class Door : MonoBehaviour {
     IEnumerator StartOpeningCoroutine()
     {
         GetComponent<Animator>().SetBool("IsOpen", true);
+        GetComponent<AudioSource>().PlayOneShot(openSnd);
         yield return new WaitForSeconds(.4f);
         GetComponent<Animator>().SetBool("IsOpen", false);
         SceneManager.LoadScene(2);

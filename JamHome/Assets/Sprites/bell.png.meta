@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 0793de4cd95f7f64a962321ddd1c555e
+guid: 2401e7a44ac5b6f43a07e22a5fc18349
 TextureImporter:
   fileIDToRecycleName:
-    21300000: oponent1  angry after finding us_0
-    21300002: oponent1  angry after finding us_1
-    21300004: oponent1  angry after finding us_2
-    21300006: oponent1  angry after finding us_3
+    21300000: bell_0
+    21300002: bell_1
+    21300004: bell_2
+    21300006: bell_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -99,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oponent1  angry after finding us_0
+      name: bell_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 7
-        width: 44
-        height: 119
+        x: 0
+        y: 0
+        width: 47
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,19 +113,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05cfb9e91eb0a664aa7a79428cba1247
+      spriteID: 04a6ce46a59b56e4c94fa4c5c305d27a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oponent1  angry after finding us_1
+      name: bell_1
       rect:
         serializedVersion: 2
-        x: 161
-        y: 7
-        width: 45
-        height: 121
+        x: 49
+        y: 0
+        width: 54
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,19 +133,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18127ced68a95be40b4895ab60adfdc4
+      spriteID: 38a7225262141984990d3cc02f4ae4a2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oponent1  angry after finding us_2
+      name: bell_2
       rect:
         serializedVersion: 2
-        x: 285
-        y: 7
-        width: 49
-        height: 118
+        x: 105
+        y: 0
+        width: 43
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b56d1a67e3953724db4a93c7d92f9b49
+      spriteID: 59bd1e15b2083ea4094c239901a57b9d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oponent1  angry after finding us_3
+      name: bell_3
       rect:
         serializedVersion: 2
-        x: 418
-        y: 7
-        width: 44
-        height: 121
+        x: 148
+        y: 0
+        width: 54
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,7 +173,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5be537b9464a0e5408055fb9e26afa0b
+      spriteID: b8bb8b28f0f334f4ca7e9c170f2dffed
       vertices: []
       indices: 
       edges: []
@@ -181,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 568e0f1e63f29e84d9ac5bedbf04a9f5
+    spriteID: c139e70701527d047bb342646b7d9af1
     vertices: []
     indices: 
     edges: []

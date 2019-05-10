@@ -8,6 +8,7 @@ public class Hero : MonoBehaviour
     public Transform head;
     public Transform legs;
     public AudioClip steps;
+    public AudioClip ahSound;
 
     public float movementSpeed;
     public float runningSpeed;
@@ -256,7 +257,9 @@ public class Hero : MonoBehaviour
         lockedInput = true;
         Move(0);
         GetComponent<Animator>().SetInteger("LostGame", 1);
-        yield return new WaitForSeconds(2f); //czas animacji
+        yield return new WaitForSeconds(1f); //czas animacji
+        GetComponent<AudioSource>().PlayOneShot(ahSound);
+        yield return new WaitForSeconds(1f); //czas animacji
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

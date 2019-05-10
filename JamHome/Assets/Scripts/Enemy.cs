@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     public Transform vision;
+    public AudioClip yellSound;
 	
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,7 +27,8 @@ public class Enemy : MonoBehaviour {
     IEnumerator GameLostAnim()
     {
         GetComponent<Animator>().SetInteger("FoundUs", 1);
-        yield return new WaitForSeconds(1f);
+        GetComponent<AudioSource>().PlayOneShot(yellSound);
+        yield return new WaitForSeconds(0.5f);
         GetComponent<Animator>().SetInteger("FoundUs", 2);
     }
 

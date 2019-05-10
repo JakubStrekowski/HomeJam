@@ -19,12 +19,14 @@ public class TimeManager : MonoBehaviour {
             timeCounter.color = new Color(1 - timeValue / maxTime, timeValue / maxTime, 0);
         }
     }
-
+    public GameObject[] bells;
     public Hero hero;
     public Image timeCounter;
     public AudioClip bell;
+    public AudioClip peopleTalking;
     private float timeValue;
     private float maxTime;
+    private bool playedOnce = false;
     // Use this for initialization
     private void Awake()
     {
@@ -32,7 +34,8 @@ public class TimeManager : MonoBehaviour {
     }
 
     void Start () {
-        maxTime = 60;
+        GetComponent<AudioSource>().Play();
+        maxTime = 45;
         TimeValue = maxTime;
 	}
 	
@@ -44,10 +47,17 @@ public class TimeManager : MonoBehaviour {
         }
         else
         {
-            GetComponent<AudioSource>().PlayOneShot(bell);
-
-            //dzwiek dzwonka
-            hero.LoseGame();
+            if (!playedOnce)
+            {
+                playedOnce = true;
+                GetComponent<AudioSource>().PlayOneShot(bell);
+                foreach(GameObject bell in bells)
+                {
+                    bell.GetComponent<Animator>().SetBool("BellRing", true);
+                }
+                //dzwiek dzwonka
+                hero.LoseGame();
+            }
         }
 	}
 }
