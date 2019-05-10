@@ -18,12 +18,12 @@ public class Hero : MonoBehaviour
     public bool isVisible = true;
     private bool isClimbing = false;
     private bool lockedInput = false;
+    Wardrobe hiddenWardrobe;
 
 
 
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         Movement();
         if (Input.GetAxis("Horizontal") == 0)
         {
@@ -112,6 +112,9 @@ public class Hero : MonoBehaviour
             collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
             if (Input.GetAxis("Vertical") > 0)
             {
+
+                hiddenWardrobe = collision.gameObject.GetComponent<Wardrobe>();
+                hiddenWardrobe.PlayOpenAnim();
                 Hide();
             }
         }
@@ -154,6 +157,7 @@ public class Hero : MonoBehaviour
 
     private void HideStop()
     {
+        hiddenWardrobe.PlayCloseAnim();
         isVisible = true;
         lockedInput = false;
         GetComponent<SpriteRenderer>().enabled = true;
