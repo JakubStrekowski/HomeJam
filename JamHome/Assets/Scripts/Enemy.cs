@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     public Transform vision;
+    public AudioClip yellSound;
 	
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -11,12 +12,24 @@ public class Enemy : MonoBehaviour {
         {
             if (collision.gameObject.GetComponent<Hero>().isVisible)
             {
-                Debug.Log("Oof");
-                //game is lost
+                StartCoroutine("GameLostAnim");
                 collision.gameObject.GetComponent<Hero>().LoseGame();
 
             }
         }
+    }
+
+    public void StartYelling()
+    {
+        StartCoroutine("GameLostAnim");
+    }
+
+    IEnumerator GameLostAnim()
+    {
+        GetComponent<Animator>().SetInteger("FoundUs", 1);
+        GetComponent<AudioSource>().PlayOneShot(yellSound);
+        yield return new WaitForSeconds(0.5f);
+        GetComponent<Animator>().SetInteger("FoundUs", 2);
     }
 
 

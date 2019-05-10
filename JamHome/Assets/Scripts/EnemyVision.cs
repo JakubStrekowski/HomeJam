@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyVision : MonoBehaviour {
 
-    public Enemy parentEnemy;
-    public GameObject turtle;
+    public Enemy enemyParent;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,10 +24,9 @@ public class EnemyVision : MonoBehaviour {
         RaycastHit2D raycastHit = Physics2D.Raycast(transform.position,hero.head.position-transform.position,20,lm);
         if (raycastHit.collider!=null)
         {
-            Debug.Log(raycastHit.collider.name);
             if (raycastHit.transform.tag=="Hero")
             {
-                //game is lost
+                enemyParent.StartYelling();
                 hero.gameObject.GetComponent<Hero>().LoseGame();
             }
         }
@@ -38,7 +36,7 @@ public class EnemyVision : MonoBehaviour {
         {
             if (raycastHitLegs.collider.tag == "Hero")
             {
-                //game is lost
+                enemyParent.StartYelling();
                 hero.gameObject.GetComponent<Hero>().LoseGame();
             }
         }

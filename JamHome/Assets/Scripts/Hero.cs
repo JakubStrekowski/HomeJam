@@ -8,6 +8,7 @@ public class Hero : MonoBehaviour
     public Transform head;
     public Transform legs;
     public AudioClip steps;
+    public AudioClip ahSound;
 
     public float movementSpeed;
     public float runningSpeed;
@@ -18,13 +19,15 @@ public class Hero : MonoBehaviour
 
     public bool isVisible = true;
     private bool isClimbing = false;
+    private bool isClimbingDown = false;
     private bool lockedInput = false;
+    private bool isOpening = false;
+    Wardrobe hiddenWardrobe;
 
 
 
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         Movement();
         if (Input.GetAxis("Horizontal") == 0)
         {
@@ -33,6 +36,10 @@ public class Hero : MonoBehaviour
         if (isClimbing)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, climbingSpeed * Time.deltaTime);
+        }
+        if (isClimbingDown)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, -climbingSpeed * Time.deltaTime);
         }
     }
 
@@ -111,35 +118,67 @@ public class Hero : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Ladder")
+        
+        if (collision.tag == "Wardrobe" && !lockedInput)
         {
+            collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
+            if (Input.GetAxis("Vertical") > 0)
+            {
+
+                hiddenWardrobe = collision.gameObject.GetComponent<Wardrobe>();
+                hiddenWardrobe.PlayOpenAnim();
+                Hide();
+            }
+        }
+
+        if (collision.tag == "Door")
+        {
+            if (Input.GetAxis("Vertical") > 0&&!isOpening)
+            {
+                isOpening = true;
+                collision.gameObject.GetComponent<Door>().PlayOpenAnim();
+            }
+        }
+
+        if (collision.tag == "LadderBegin")
+        {
+            if (isClimbingDown)
+            {
+                isClimbingDown = false;
+                lockedInput = false;
+                GetComponent<Animator>().SetInteger("Climb", 0);
+            }
+            collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
             if (Input.GetAxis("Vertical") > 0)
             {
                 if (isClimbing == false) ClimbLadder();
 
             }
         }
-        if (collision.tag == "Wardrobe" && !lockedInput)
-        {
-            collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
-            if (Input.GetAxis("Vertical") > 0)
-            {
-                Hide();
-            }
-        }
 
         if (collision.tag == "LadderEnd")
         {
+            if (isClimbing)
+            {
+                isClimbing = false;
+                lockedInput = false;
+                GetComponent<Animator>().SetInteger("Climb", 0);
+            }
             collision.gameObject.GetComponent<ShowUIElement>().EnableUI();
+            if (Input.GetAxis("Vertical") < 0)
+            {
+                if (isClimbingDown == false)
+                {
+                    StartCoroutine("DisableCollider");
+                    ClimbLadderDown();
+                }
+
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Ladder" && isClimbing)
-        {
-            isClimbing = false;
-            lockedInput = false;
-        }
+        
         if (collision.tag == "Wardrobe")
         {
             collision.gameObject.GetComponent<ShowUIElement>().DisableUI();
@@ -152,7 +191,15 @@ public class Hero : MonoBehaviour
 
     private void ClimbLadder()
     {
+        GetComponent<Animator>().SetInteger("Climb", 1);
         isClimbing = true;
+        lockedInput = false;
+    }
+
+    private void ClimbLadderDown()
+    {
+        GetComponent<Animator>().SetInteger("Climb", 1);
+        isClimbingDown = true;
         lockedInput = false;
     }
 
@@ -166,6 +213,7 @@ public class Hero : MonoBehaviour
 
     private void HideStop()
     {
+        hiddenWardrobe.PlayCloseAnim();
         isVisible = true;
         lockedInput = false;
         GetComponent<SpriteRenderer>().enabled = true;
@@ -208,8 +256,18 @@ public class Hero : MonoBehaviour
     {
         lockedInput = true;
         Move(0);
-        // play lost animation
-        yield return new WaitForSeconds(0.4f); //czas animacji
+        GetComponent<Animator>().SetInteger("LostGame", 1);
+        yield return new WaitForSeconds(1f); //czas animacji
+        GetComponent<AudioSource>().PlayOneShot(ahSound);
+        yield return new WaitForSeconds(1f); //czas animacji
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    IEnumerator DisableCollider()
+    {
+        Debug.Log("asdas");
+        GetComponent<BoxCollider2D>().enabled = false;
+        yield return new WaitForSeconds(0.4f);
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 }
