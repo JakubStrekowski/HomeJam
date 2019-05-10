@@ -23,7 +23,6 @@ public class EnemyVision : MonoBehaviour {
         RaycastHit2D raycastHit = Physics2D.Raycast(transform.position,hero.head.position-transform.position,20,lm);
         if (raycastHit.collider!=null)
         {
-            Debug.Log(raycastHit.collider.name);
             if (raycastHit.transform.tag=="Hero")
             {
                 //game is lost

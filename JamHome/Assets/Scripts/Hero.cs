@@ -20,6 +20,7 @@ public class Hero : MonoBehaviour
     private bool isClimbing = false;
     private bool isClimbingDown = false;
     private bool lockedInput = false;
+    private bool isOpening = false;
     Wardrobe hiddenWardrobe;
 
 
@@ -126,6 +127,15 @@ public class Hero : MonoBehaviour
                 hiddenWardrobe = collision.gameObject.GetComponent<Wardrobe>();
                 hiddenWardrobe.PlayOpenAnim();
                 Hide();
+            }
+        }
+
+        if (collision.tag == "Door")
+        {
+            if (Input.GetAxis("Vertical") > 0&&!isOpening)
+            {
+                isOpening = true;
+                collision.gameObject.GetComponent<Door>().PlayOpenAnim();
             }
         }
 

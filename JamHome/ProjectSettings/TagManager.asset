@@ -10,6 +10,7 @@ TagManager:
   - Hero
   - EnemyBorder
   - LadderBegin
+  - Door
   layers:
   - Default
   - TransparentFX

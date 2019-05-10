@@ -19,14 +19,14 @@ public class Wardrobe : MonoBehaviour {
     IEnumerator StartOpeningCoroutine()
     {
         GetComponent<Animator>().SetInteger("playerState", 1);
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(.2f);
         GetComponent<Animator>().SetInteger("playerState", 2);
     }
 
     IEnumerator StartClosingCoroutine()
     {
         GetComponent<Animator>().SetInteger("playerState", 1);
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(.2f);
         GetComponent<Animator>().SetInteger("playerState", 0);
     }
 }
