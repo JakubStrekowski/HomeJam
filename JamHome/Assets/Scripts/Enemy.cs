@@ -11,12 +11,23 @@ public class Enemy : MonoBehaviour {
         {
             if (collision.gameObject.GetComponent<Hero>().isVisible)
             {
-                Debug.Log("Oof");
-                //game is lost
+                StartCoroutine("GameLostAnim");
                 collision.gameObject.GetComponent<Hero>().LoseGame();
 
             }
         }
+    }
+
+    public void StartYelling()
+    {
+        StartCoroutine("GameLostAnim");
+    }
+
+    IEnumerator GameLostAnim()
+    {
+        GetComponent<Animator>().SetInteger("FoundUs", 1);
+        yield return new WaitForSeconds(1f);
+        GetComponent<Animator>().SetInteger("FoundUs", 2);
     }
 
 

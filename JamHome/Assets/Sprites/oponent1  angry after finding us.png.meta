@@ -1,7 +1,11 @@
 fileFormatVersion: 2
-guid: 32066029bf2f9a143896148c42e89c94
+guid: 0793de4cd95f7f64a962321ddd1c555e
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: oponent1  angry after finding us_0
+    21300002: oponent1  angry after finding us_1
+    21300004: oponent1  angry after finding us_2
+    21300006: oponent1  angry after finding us_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,11 +97,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: oponent1  angry after finding us_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 7
+        width: 44
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cfb9e91eb0a664aa7a79428cba1247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  angry after finding us_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 7
+        width: 45
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18127ced68a95be40b4895ab60adfdc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  angry after finding us_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 7
+        width: 49
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56d1a67e3953724db4a93c7d92f9b49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  angry after finding us_3
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 7
+        width: 44
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be537b9464a0e5408055fb9e26afa0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b202b86dccdbcb84498f1326725bab86
+    spriteID: 568e0f1e63f29e84d9ac5bedbf04a9f5
     vertices: []
     indices: 
     edges: []

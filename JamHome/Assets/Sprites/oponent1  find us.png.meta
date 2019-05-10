@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: c9fb6468fce42cb4ba5f1be8e0e34a5c
+guid: fed409ddf4d6d5c4ab8a881ea24e3b45
 TextureImporter:
   fileIDToRecycleName:
-    21300000: szary pasek_0
+    21300000: oponent1  find us_0
+    21300002: oponent1  find us_1
+    21300004: oponent1  find us_2
+    21300006: oponent1  find us_3
+    21300008: oponent1  find us_4
+    21300010: oponent1  find us_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -32,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -96,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: szary pasek_0
+      name: oponent1  find us_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 762
-        width: 258
-        height: 31
+        x: 44
+        y: 7
+        width: 34
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +115,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d1e1f9d764763b43a37df454947ea10
+      spriteID: 2c9360ecb75f5c145b3f582cfb48f279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  find us_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 7
+        width: 34
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ac6dbadab3ff64ba58853d5defd8e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  find us_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 7
+        width: 34
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3478906917d9c4b81b7705596f6908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  find us_3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 34
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f322ed0286560e54cb7e5cda237ffa70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  find us_4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 7
+        width: 39
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593fe4bd3613cdc498dd3c01e2385a9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oponent1  find us_5
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 7
+        width: 44
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eaedbb888627fb41b6448d4d21edb00
       vertices: []
       indices: 
       edges: []
@@ -118,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3854c2a9c9991724fb74d3a25908e7cb
+    spriteID: bc49560f0750ecd42af62626c59d8b16
     vertices: []
     indices: 
     edges: []

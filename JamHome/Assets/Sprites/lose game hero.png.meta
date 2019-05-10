@@ -1,14 +1,18 @@
 fileFormatVersion: 2
-guid: 98ea67e6e3e4c8c46bf6a181d4b16349
+guid: 79d3974a6bfa6ea42a89afb005d2f6fd
 TextureImporter:
   fileIDToRecycleName:
-    21300000: shool_0
-    21300002: shool_1
-    21300004: shool_2
-    21300006: shool_3
-    21300008: shool_4
-    21300010: shool_5
-    21300012: shool_6
+    21300000: lose game hero_0
+    21300002: lose game hero_1
+    21300004: lose game hero_2
+    21300006: lose game hero_3
+    21300008: lose game hero_4
+    21300010: lose game hero_5
+    21300012: lose game hero_6
+    21300014: lose game hero_7
+    21300016: lose game hero_8
+    21300018: lose game hero_9
+    21300020: lose game hero_10
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -102,33 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shool_0
+      name: lose game hero_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 130
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 1, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ef4c176c49e3224ca5c4ed2c12ddf8e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shool_1
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 0
-        width: 469
-        height: 399
+        x: 45
+        y: 135
+        width: 32
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,19 +120,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f62ba481a846a7449667d40b707fe9e
+      spriteID: d3a53cf65e528d04892056ddf25727d9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shool_2
+      name: lose game hero_1
       rect:
         serializedVersion: 2
-        x: 167
-        y: 0
-        width: 76
-        height: 399
+        x: 176
+        y: 135
+        width: 32
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d17560f969da73c46b5c78e8c5848967
+      spriteID: cd4a7cc39f4814b42a4ec8c3e77eb974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shool_3
+      name: lose game hero_2
       rect:
         serializedVersion: 2
-        x: 799
-        y: 0
-        width: 224
-        height: 400
+        x: 302
+        y: 135
+        width: 32
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,19 +160,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c0c2d231187ab4c9f547b95dede7ab
+      spriteID: 935175131a94ac6458a3a22bb4d3ceac
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shool_4
+      name: lose game hero_3
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 0
-        width: 118
-        height: 400
+        x: 430
+        y: 135
+        width: 32
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,19 +180,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7e6555707991b4cbaf499eabe047bd
+      spriteID: c0d26145c6bb15341b96555356008d3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shool_5
+      name: lose game hero_4
       rect:
         serializedVersion: 2
-        x: 1333
-        y: 0
-        width: 128
-        height: 400
+        x: 558
+        y: 135
+        width: 32
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c900e0d072642d4e937f7fc7ee78450
+      spriteID: c1117e18434e48a41a8f43cf62feb393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shool_6
+      name: lose game hero_5
       rect:
         serializedVersion: 2
-        x: 1514
-        y: 0
-        width: 252
-        height: 400
+        x: 686
+        y: 135
+        width: 32
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +220,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2777d5a17fac57f4da33cc30e3472827
+      spriteID: c52c5ec6595e9f949bbf1d1dd216c466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lose game hero_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 206
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e48cfb2320e6054a97e7d8902b191dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lose game hero_7
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 135
+        width: 36
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddc0fb55a26bf349a8926a2d58ddcd9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lose game hero_8
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 135
+        width: 32
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb01369a3c4f1745b385e43f2dd7455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lose game hero_9
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 78
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec698adc09daa84a8a5047b9df3ec38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lose game hero_10
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 7
+        width: 36
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2fc33049d2c684dae02278d9859608
       vertices: []
       indices: 
       edges: []
@@ -244,7 +328,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 01401dbbf9b1d4241adeb304e03ebc81
+    spriteID: 177d3e1938ed2544cbeb6906a698e4bb
     vertices: []
     indices: 
     edges: []

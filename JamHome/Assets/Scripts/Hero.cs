@@ -251,8 +251,8 @@ public class Hero : MonoBehaviour
     {
         lockedInput = true;
         Move(0);
-        // play lost animation
-        yield return new WaitForSeconds(0.4f); //czas animacji
+        GetComponent<Animator>().SetInteger("LostGame", 1);
+        yield return new WaitForSeconds(2f); //czas animacji
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

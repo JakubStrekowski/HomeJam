@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour {
-    
+
+    public Enemy enemyParent;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +26,7 @@ public class EnemyVision : MonoBehaviour {
         {
             if (raycastHit.transform.tag=="Hero")
             {
-                //game is lost
+                enemyParent.StartYelling();
                 hero.gameObject.GetComponent<Hero>().LoseGame();
             }
         }
@@ -35,7 +36,7 @@ public class EnemyVision : MonoBehaviour {
         {
             if (raycastHitLegs.collider.tag == "Hero")
             {
-                //game is lost
+                enemyParent.StartYelling();
                 hero.gameObject.GetComponent<Hero>().LoseGame();
             }
         }

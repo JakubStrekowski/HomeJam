@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 44d645a9f0cd8704685eff306fa5c3f9
+guid: 486e7c408788f5b4db676c49f72fcc6a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: schody fajne_0
-    21300002: schody fajne_1
+    21300000: "dach, \u015Bciana, front, podziemie(ziemia)_0"
+    21300002: "dach, \u015Bciana, front, podziemie(ziemia)_1"
+    21300004: "dach, \u015Bciana, front, podziemie(ziemia)_2"
+    21300006: "dach, \u015Bciana, front, podziemie(ziemia)_3"
+    21300008: "dach, \u015Bciana, front, podziemie(ziemia)_4"
+    21300010: "dach, \u015Bciana, front, podziemie(ziemia)_5"
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -97,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: schody fajne_0
+      name: "dach, \u015Bciana, front, podziemie(ziemia)_0"
       rect:
         serializedVersion: 2
-        x: 195
-        y: 404
-        width: 272
-        height: 396
+        x: 1880
+        y: 800
+        width: 120
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,27 +115,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9664d8c6b9fc0a4595bd4bf89c666bc
+      spriteID: b7e77a3f02ad927439d088235cf4781b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: schody fajne_1
+      name: "dach, \u015Bciana, front, podziemie(ziemia)_1"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 477
-        height: 406
+        x: 1653
+        y: 800
+        width: 130
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 3, y: 0, z: 4, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d048b1a82ca2ba341bbb69c3954ec144
+      spriteID: 7d426620dcaad824e90b770279e59f39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dach, \u015Bciana, front, podziemie(ziemia)_2"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e642d159358ef740a83e5779c31398a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dach, \u015Bciana, front, podziemie(ziemia)_3"
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1200
+        width: 227
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29354f8fafab541488b542b3716e6299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dach, \u015Bciana, front, podziemie(ziemia)_4"
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 1200
+        width: 365
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a547eee59497909449aa90b2fbc9d1f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "dach, \u015Bciana, front, podziemie(ziemia)_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 481
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ed3b26490518d40bdff400a0adb6db
       vertices: []
       indices: 
       edges: []
@@ -139,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 51eda564baacdd04994c88b788735f4a
+    spriteID: d1dc5ed74a70473449b9c372d2ce4ad9
     vertices: []
     indices: 
     edges: []
